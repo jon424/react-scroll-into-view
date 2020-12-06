@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import colors from './css-colors';
+
 import './App.css';
+
+
+//https://www.selbekk.io/blog/2019/08/how-to-fade-in-content-as-it-scrolls-into-view/
+
+function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+  }, []);
+  return (
+    <div
+      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      ref={domRef}
+    >
+      {props.children}
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>All the CSS colors!</h1>
+
+      {colors.map(color => (
+        <FadeInSection key={color}>
+          <div className="box" style={{ backgroundColor: color }}>
+            <span>{color}</span>
+          </div>
+        </FadeInSection>
+      ))}
     </div>
   );
 }
