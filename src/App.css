@@ -18,14 +18,15 @@
 }
 
 /* Just for presentational purposes, please disregard in your own implementation */
-.App {
+/* .App {
   max-width: 100%;
   padding: 1em;
-}
+} */
 
 .box {
   padding: 50px;
   margin: 20px 0;
+  /* width: 50%; */
 }
 
 .box span {
