@@ -28,17 +28,17 @@ function App() {
     <div className="App">
       <h1>All the CSS colors!</h1>
 
-      {colors.map((color) => (
+      {/* {colors.map((color) => (
         <FadeInSection key={color}>
           <div className="box" style={{ backgroundColor: color }}>
             <span>{color}</span>
           </div>
         </FadeInSection>
-      ))}
+      ))} */}
       <FadeInSection>
         <div className="jack">
-          <div className="img">{/*scroll jack image*/}</div>
-          <div className="content">hey whattup?</div>
+          <div className="img">image</div>
+          <div className="content">content</div>
         </div>
       </FadeInSection>
     </div>

@@ -42,3 +42,21 @@ html {
 * {
   box-sizing: inherit;
 }
+
+.jack {
+  display: inline-flex;
+  border: 22px solid green;
+}
+
+.img {
+ 
+border: 22px solid yellowgreen
+
+}
+
+.content {
+
+  flex-direction: row;
+  border: 22px solid yellow;
+}
+
