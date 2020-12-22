@@ -26,8 +26,6 @@ function FadeInSection(props) {
 function ScrollJack() {
   return (
     <div className="App">
-      <h1>All the CSS colors!</h1>
-
       {/* {colors.map((color) => (
         <FadeInSection key={color}>
           <div className="box" style={{ backgroundColor: color }}>
@@ -35,12 +33,14 @@ function ScrollJack() {
           </div>
         </FadeInSection>
       ))} */}
+      <div className="scroll-jack">
       <FadeInSection>
         <div className="jack">
           <div className="img">image</div>
           <div className="content">content</div>
         </div>
       </FadeInSection>
+      </div>
     </div>
   );
 }

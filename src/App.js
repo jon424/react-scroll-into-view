@@ -7,6 +7,19 @@ function App() {
   return (
     <div className="App">
       <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
+      <ScrollJack />
     </div>
   );
 }
